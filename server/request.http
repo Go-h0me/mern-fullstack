@@ -1,0 +1,54 @@
+# GET http://localhost:5000/api/auth
+
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username":"gohome",
+    "password":"gohome"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username":"gohome",
+    "password":"gohome"
+}
+
+###
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjAxZTdmMmY0M2U1ZDlkZmZlOWNmZmEiLCJpYXQiOjE2NDQ0MDQ0NDl9.YyiQYyAPPdwduoPxwSNtZTwg0y2y8ns86QtsF5YN2u4
+
+{ 
+    "title":"Hihi",
+    "description": "Heact",
+    "url": "hihi.com",
+    "status": "TO LEARN"
+}
+
+
+###
+
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjAxZTdmMmY0M2U1ZDlkZmZlOWNmZmEiLCJpYXQiOjE2NDQyOTIxMTB9.BBUEkQMWV7LzvFFCd3TMCLFI3-pFgem5W92HiU2EVuY
+
+###
+PUT http://localhost:5000/api/posts/6201e7f2f43e5d9dffe9cffa
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjAxZTdmMmY0M2U1ZDlkZmZlOWNmZmEiLCJpYXQiOjE2NDQyOTIxMTB9.BBUEkQMWV7LzvFFCd3TMCLFI3-pFgem5W92HiU2EVuY
+
+{
+    "title": "Vue",
+    "description":"Vueee",
+    "url": "vue.org",
+    "status":"LEARNING"
+}
+
+### 
+DELETE http://localhost:5000/api/posts/6201e7f2f43e5d9dffe9cffa
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjAxZTdmMmY0M2U1ZDlkZmZlOWNmZmEiLCJpYXQiOjE2NDQyOTIxMTB9.BBUEkQMWV7LzvFFCd3TMCLFI3-pFgem5W92HiU2EVuY
